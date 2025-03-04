@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark text-white m-0 font-sans;
+  }
+
+  /* Custom Scrollbar Styles */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-dark/50;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gradient-to-b from-primary via-purple-500 to-pink-500 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gradient-to-b from-primary/80 via-purple-500/80 to-pink-500/80;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-primary text-white rounded-lg transition-all hover:scale-105 hover:shadow-lg;
+  }
+  .btn-secondary {
+    @apply px-6 py-3 bg-secondary text-dark rounded-lg transition-all hover:scale-105 hover:shadow-lg;
+  }
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16;
+  }
+}
+
+.select-dropdown {
+  @apply bg-gradient-to-br from-gray-900/90 via-gray-800/95 to-gray-900/90 backdrop-blur-xl;
+  @apply border border-gray-700/50 shadow-lg;
+  @apply hover:shadow-primary/10 transition-all duration-300;
+}
+
+.select-dropdown option {
+  @apply bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900;
+  @apply text-gray-200 px-4 py-3;
+  @apply hover:bg-gradient-to-br hover:from-primary/20 hover:via-purple-500/20 hover:to-pink-500/20;
+  @apply hover:text-white transition-all duration-300;
+}
+
+.transition-base {
+  @apply transition-all duration-300;
+}
